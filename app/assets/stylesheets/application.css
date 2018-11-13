@@ -1,0 +1,30 @@
+.nav li {
+    float: left;
+}
+
+.nav {
+    margin-bottom: 10px;
+    overflow: auto;
+}
+.nav li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.na ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+
+
+.footer {
+    min-height:200px;
+    background-color: #f8f8f8;
+    width: 100%;
+    margin-top: 10px;
+    overflow: auto;
+}
