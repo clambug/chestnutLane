@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div style="width:400px; height:auto">
+<%= link_to image_tag(@product.image, style: 'width:100%'), products_path %>
+<div>
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
