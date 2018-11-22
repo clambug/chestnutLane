@@ -1,4 +1,8 @@
+<% if current_customer %>
 
+<% else %>
+
+<% end %>
    <div class="topHead navbar-brand mr-autorail" >
    <%= image_tag("logo.png") %>
     </div>
@@ -12,15 +16,25 @@
         <a><%= link_to "Home", root_path %><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a><%= link_to "Sign Up", new_customer_registration_path %></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a><%= link_to "Sign Out", destroy_customer_session_path, method: :delete %></a>
       </li>
     </ul>
     <span class="navbar-text">
-      Navbar text with an inline element
-    </span>
+      <li class="nav-item">
+        <% if current_customer %>
+        <a><%= link_to "Sign Out", destroy_customer_session_path, method: :delete %></a>
+      </li>
+      <li class="nav-item">
+        <% else %>
+        <a><%= link_to "Sign in", new_customer_session_path %></a>
+      </li>      
+      <li class="nav-item">
+       <a><%= link_to "Sign Up", new_customer_registration_path %></a>
+       <% end %>
+      </li>    </span>
   </div>
 </nav>  
       
